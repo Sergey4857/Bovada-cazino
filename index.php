@@ -19,12 +19,16 @@
   </header>
 
   <section id="home" class="hero">
-    <div class="container">
+    <div class="container hero_cotent">
       <h1>get ready to start playing with <span class="highlight">$3000 welcome bonus</span></h1>
-      <p>100% match bonus up to $1000 on first 3 deposits</p>
-      <a href="#contact" class="cta-button">Начать сейчас</a>
+      <p><span>100%</span> match bonus up to <span>$1000</span> on first <span>3 deposits</span></p>
+      <div class="hero_promo">
 
-
+        <div>First Deposit</div>
+        <div class="deposit_promo">cawelcome100</div>
+        <button class="copy_btn">copy</button>
+      </div>
+      <a class="hero_btn_link" href="/">claim your bonus</a>
     </div>
   </section>
 
