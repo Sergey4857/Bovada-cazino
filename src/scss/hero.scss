@@ -4,6 +4,48 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  @media (max-width: 768px) {
+    padding: 190px 20px;
+    background-position: 65%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -5%;
+    max-width: 650px;
+    width: 100%;
+    height: 95%;
+    background-image: url(../images/woman1.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -8%;
+    bottom: 0;
+    max-width: 650px;
+    width: 100%;
+    height: 95%;
+    background-image: url(../images/woman2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
   .hero_cotent {
     display: block;
     margin: 0 auto;
@@ -13,6 +55,11 @@
     text-align: center;
     border-radius: 15px;
     background: rgba(0, 39, 62, 0.2);
+    border: 2px solid #4c5f6d;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
     h1 {
       color: #fff;
@@ -23,6 +70,11 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      gap: 10px;
+      @media (max-width: 768px) {
+        gap: 18px;
+      }
+
       span {
         color: #fff;
         font-size: 33.636px;
@@ -33,6 +85,9 @@
         background-color: #0080f4;
         padding: 4px;
         transform: rotate(-1deg);
+        @media (max-width: 768px) {
+          font-size: 30px;
+        }
       }
     }
     p {
@@ -55,16 +110,96 @@
       justify-content: center;
       align-items: center;
       gap: 10px;
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+      .hero_first_deposit,
+      .hero_second_deposit {
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        width: 100%;
+
+        .hero_subtitle {
+          color: rgba(255, 255, 255, 0.5);
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1.39;
+          text-align: start;
+        }
+        .deposit_wrap {
+          border: 2px solid #0080f4;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 15px 20px;
+
+          .deposit_promo {
+            background: linear-gradient(90deg, #007eff 0%, #0068d1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 800;
+            text-transform: uppercase;
+          }
+          .copy_btn {
+            border: none;
+            background: none;
+            color: #fff;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            text-transform: uppercase;
+            cursor: pointer;
+          }
+        }
+      }
     }
-    a {
+
+    .hero_btn_link {
       color: #fff;
       text-align: center;
       font-size: 25px;
       font-weight: 800;
+      text-transform: uppercase;
+      text-decoration: none;
       border-radius: 100px;
+      padding: 15px 60px;
+      display: inline-block;
+      margin-top: 25px;
       border: 1px solid #ff3a4b;
       background: linear-gradient(180deg, #d60416 0%, #ff3a4b 100%);
       box-shadow: 0 10px 30px 0 rgba(255, 58, 75, 0.5);
+    }
+  }
+  .description {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    line-height: normal;
+    margin: 25px auto;
+    max-width: 650px;
+    position: relative;
+    z-index: 1;
+    span {
+      font-weight: 700;
+    }
+  }
+  .payment_images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    position: relative;
+    z-index: 1;
+    img {
+      width: 100%;
+      max-width: 47px;
     }
   }
 }
