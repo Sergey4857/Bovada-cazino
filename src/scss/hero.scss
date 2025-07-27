@@ -5,7 +5,8 @@
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  overflow: hidden;
+
+  min-height: calc(100vh - 109px);
   @media (max-width: 768px) {
     padding: 190px 20px;
     background-position: 65%;
@@ -15,16 +16,20 @@
     content: "";
     position: absolute;
     bottom: 0;
-    left: -5%;
-    max-width: 650px;
+    left: 0;
+    max-width: 784px;
     width: 100%;
-    height: 95%;
+    height: 105%;
     background-image: url(../images/woman1.png);
     background-size: contain;
-    background-position: center;
+    background-position: bottom left;
     background-repeat: no-repeat;
     z-index: 0;
-    @media (max-width: 1024px) {
+    @media (max-width: 1440px) {
+      max-width: 600px;
+      height: 80%;
+    }
+    @media (max-width: 768px) {
       display: none;
     }
   }
@@ -32,17 +37,21 @@
   &::after {
     content: "";
     position: absolute;
-    right: -8%;
+    right: 0;
     bottom: 0;
     max-width: 650px;
     width: 100%;
-    height: 95%;
+    height: 105%;
     background-image: url(../images/woman2.png);
     background-size: contain;
-    background-position: center;
+    background-position: bottom right;
     background-repeat: no-repeat;
     z-index: 0;
-    @media (max-width: 1024px) {
+    @media (max-width: 1440px) {
+      max-width: 500px;
+      height: 80%;
+    }
+    @media (max-width: 768px) {
       display: none;
     }
   }
