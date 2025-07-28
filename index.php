@@ -1,3 +1,11 @@
+<?php
+// require 'IP_logger.php';
+// $ip_logger = new IP_Logger();
+// $ip_info = $ip_logger->log_ip();
+// echo '<pre>';
+// print_r($ip_info);
+// echo '</pre>';
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -50,8 +58,8 @@
       Western Sahara.</p>
 
     <div class="payment_images">
-      <img src="/src/icons/visa.svg" alt="visa">
-      <img src="/src/icons/mastercard.svg" alt="mastercard">
+      <img src="/src/icons/Visa.svg" alt="visa">
+      <img src="/src/icons/Mastercard.svg" alt="mastercard">
       <img src="/src/icons/L.svg" alt="ethereum">
       <img src="/src/icons/t.svg" alt="bitcoin">
       <img src="/src/icons/Bitcoin.svg" alt="litecoin">
