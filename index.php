@@ -50,7 +50,7 @@
       </div>
 
 
-      <a class="hero_btn_link" href="/">claim your bonus</a>
+      <a class="hero_btn_link" href="https://wow.itisok.work/click?pid=19842&offer_id=4766&l=1753281951">claim your bonus</a>
     </div>
 
     <p class="description"><span>Bovada</span> is licensed and regulated by the Union of the Comoros and the Central

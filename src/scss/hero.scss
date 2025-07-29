@@ -1,15 +1,16 @@
 .hero {
   padding: 50px;
-  background-image: url(../images/background.png);
+  background-image: url(../images/background.avif);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
 
-  min-height: calc(100vh - 110px);
+  min-height: calc(100vh - 100px);
   @media (max-width: 768px) {
-    padding: 190px 20px;
+    padding: 80px 20px;
     background-position: 65%;
+    min-height: calc(100vh - 69px);
   }
 
   &::before {
@@ -20,7 +21,7 @@
     max-width: 784px;
     width: 100%;
     height: 105%;
-    background-image: url(../images/woman1.png);
+    background-image: url(../images/woman1.avif);
     background-size: contain;
     background-position: bottom left;
     background-repeat: no-repeat;
@@ -42,7 +43,7 @@
     max-width: 650px;
     width: 100%;
     height: 105%;
-    background-image: url(../images/woman2.png);
+    background-image: url(../images/woman2.avif);
     background-size: contain;
     background-position: bottom right;
     background-repeat: no-repeat;
@@ -60,20 +61,22 @@
     margin: 0 auto;
     width: 100%;
     max-width: 700px;
-    padding: 50px 25px;
+    padding: 25px 20px;
     text-align: center;
     border-radius: 15px;
-    background: rgba(0, 39, 62, 0.2);
-    border: 2px solid #4c5f6d;
     position: relative;
     z-index: 1;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid #6c91c0;
+
+    background: rgba(0, 39, 62, 0.2);
+
+    backdrop-filter: blur(12.5px);
 
     h1 {
       color: #fff;
-      font-size: 30px;
+      font-size: 25px;
       font-weight: 600;
+      line-height: 1;
       text-transform: uppercase;
       display: flex;
       flex-direction: column;
@@ -92,19 +95,20 @@
         line-height: normal;
         text-transform: uppercase;
         background-color: #0080f4;
+        background-image: linear-gradient(to right, #0080f4, #0068d1);
         padding: 4px;
         transform: rotate(-1deg);
         @media (max-width: 768px) {
-          font-size: 30px;
+          font-size: 29px;
         }
       }
     }
     p {
       color: #fff;
       text-align: center;
-      font-family: Rubik;
       font-size: 18px;
       line-height: 1.39;
+      font-weight: 300;
       margin: 25px 0;
 
       span {
@@ -142,7 +146,16 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 15px 20px;
+          padding: 15px;
+          transition: all 0.3s ease;
+          background: rgba(255, 255, 255, 0.05);
+
+          &.copied {
+            border: 2px solid #50af95;
+            backdrop-filter: blur(12.5px);
+            animation: copySuccess 0.3s ease-out;
+            background-color: rgba(80, 175, 149, 0.25);
+          }
 
           .deposit_promo {
             background: linear-gradient(90deg, #007eff 0%, #0068d1 100%);
@@ -154,6 +167,17 @@
             font-style: normal;
             font-weight: 800;
             text-transform: uppercase;
+            transition: all 0.3s ease;
+            @media (max-width: 768px) {
+              font-size: 20px;
+            }
+
+            &.copied {
+              background: linear-gradient(90deg, #50af95 0%, #50af95 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+            }
           }
           .copy_btn {
             border: none;
@@ -165,6 +189,7 @@
             line-height: normal;
             text-transform: uppercase;
             cursor: pointer;
+            transition: all 0.3s ease;
           }
         }
       }
@@ -184,6 +209,33 @@
       border: 1px solid #ff3a4b;
       background: linear-gradient(180deg, #d60416 0%, #ff3a4b 100%);
       box-shadow: 0 10px 30px 0 rgba(255, 58, 75, 0.5);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s ease;
+      @media (max-width: 768px) {
+        font-size: 22px;
+        padding: 15px;
+        width: 100%;
+      }
+
+      &:not(.animate-on-load) {
+        transition: all 0.5s ease;
+      }
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px 0 rgba(255, 58, 75, 0.6);
+        background: linear-gradient(180deg, #ff3a4b 0%, #d60416 100%);
+      }
+
+      &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 25px 0 rgba(255, 58, 75, 0.5);
+      }
+
+      &.pulse {
+        animation: buttonPulse 2s ease-in-out infinite;
+      }
     }
   }
   .description {
@@ -194,6 +246,7 @@
     margin: 25px auto;
     max-width: 650px;
     position: relative;
+    font-weight: 300;
     z-index: 1;
     span {
       font-weight: 700;
