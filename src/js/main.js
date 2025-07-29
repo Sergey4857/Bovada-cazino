@@ -123,7 +123,3 @@ document.addEventListener("DOMContentLoaded", function () {
   setTimeout(animateElements, 100);
   initCopyButtons();
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.body.classList.add("loaded");
-});
