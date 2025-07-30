@@ -14,3 +14,21 @@ header {
     }
   }
 }
+
+.header-betus {
+  padding: 20px 0;
+  position: relative;
+  z-index: 1;
+  .logo {
+    max-width: 125px;
+  }
+}
+
+.header-1win {
+  padding: 20px 0;
+  position: relative;
+  z-index: 1;
+  .logo {
+    max-width: 116px;
+  }
+}

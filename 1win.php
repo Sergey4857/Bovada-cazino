@@ -12,14 +12,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cazino Bovada</title>
+  <title>1win Casino</title>
   <link rel="stylesheet" href="dist/main.css">
 </head>
 
 <body>
-  <?php require 'template-parts/bovada-template.php'; ?>
+  <?php require 'template-parts/1win-template.php'; ?>
 
   <script src="dist/main.js"></script>
 </body>
 
-</html>
+</html> 

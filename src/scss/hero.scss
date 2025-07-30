@@ -98,6 +98,7 @@
         background-image: linear-gradient(to right, #0080f4, #0068d1);
         padding: 4px;
         transform: rotate(-1deg);
+
         @media (max-width: 768px) {
           font-size: 29px;
         }
@@ -262,6 +263,312 @@
     img {
       width: 100%;
       max-width: 47px;
+    }
+  }
+}
+
+.hero-betus {
+  margin-top: -74px;
+  background: linear-gradient(270deg, #013d7f 0%, #011e3d 100%), #fff;
+
+  min-height: 100vh;
+  padding-top: 145px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 665px;
+    width: 100%;
+    height: 105%;
+    background-image: url(../images/woman1.avif);
+    background-size: contain;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    z-index: 0;
+    @media (max-width: 1440px) {
+      max-width: 600px;
+      height: 80%;
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: 520px;
+    width: 100%;
+    height: 105%;
+    background-image: url(../images/woman2.avif);
+    background-size: contain;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    z-index: 0;
+    @media (max-width: 1440px) {
+      max-width: 500px;
+      height: 80%;
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  .hero_cotent {
+    padding: 50px 25px;
+    @media (max-width: 768px) {
+      padding: 25px 20px;
+    }
+    h1 {
+      font-size: 30px;
+      span {
+        max-width: 325px;
+        color: #fff;
+        font-size: 30px;
+        font-style: italic;
+        font-weight: 800;
+        line-height: normal;
+        text-transform: uppercase;
+        padding: 3px 10px;
+      }
+    }
+    .hero_promo {
+      @media (max-width: 768px) {
+        flex-direction: column-reverse;
+      }
+      .hero_first_deposit,
+      .hero_second_deposit {
+        .hero_subtitle {
+          color: #fff;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 25px;
+          span {
+            color: #fff;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+          }
+        }
+        .deposit_wrap {
+          border: 2px solid #0080f4;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 15px;
+          transition: all 0.3s ease;
+          background: rgba(255, 255, 255, 0.05);
+
+          &.copied {
+            border: 2px solid #e214e6;
+
+            animation: copySuccess 0.3s ease-out;
+            background-color: rgba(226, 20, 230, 0.25);
+          }
+          .deposit_promo {
+            &.copied {
+              background: linear-gradient(90deg, #e214e6 0%, #c800cc 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+            }
+          }
+
+          // .deposit_promo {
+          //   &.copied {
+          //     border: 2px solid #ff3a4b;
+
+          //     background: rgba(255, 255, 255, 0.05);
+
+          //     -webkit-background-clip: text;
+          //     -webkit-text-fill-color: transparent;
+          //     background-clip: text;
+          //   }
+          // }
+          .copy_btn {
+            border: none;
+            background: none;
+            color: #fff;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+          }
+        }
+      }
+    }
+    .hero_btn_link {
+      color: #027bff;
+
+      text-align: center;
+      width: 100%;
+
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      text-transform: uppercase;
+      border-radius: 100px;
+      border: 1px solid #fff;
+      background: linear-gradient(0deg, #fff 0%, #fff 100%),
+        linear-gradient(180deg, #027bff 0%, #56a7ff 100%);
+      box-shadow: 0 10px 30px 0 rgba(255, 255, 255, 0.5) !important;
+      &:hover {
+        background: linear-gradient(0deg, #fff 0%, #fff 100%),
+          linear-gradient(180deg, #56a7ff 0%, #027bff 100%);
+      }
+    }
+  }
+}
+
+.hero-1win {
+  margin-top: -97px;
+  background-image: url(../images/1win.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding-top: 270px;
+  @media (max-width: 768px) {
+    background-image: url(../images/1win_mob.avif);
+    padding-top: 170px;
+    margin-top: -97px;
+  }
+  &::before {
+    display: none;
+  }
+  &::after {
+    display: none;
+  }
+
+  .hero_cotent {
+    padding: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+
+    h1 {
+      color: #fff;
+
+      text-align: center;
+
+      font-size: 150px;
+      font-style: italic;
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+      @media (max-width: 768px) {
+        font-size: 96px;
+      }
+      span {
+        margin-top: -50px;
+        font-size: 50px;
+        padding: 4px 25px;
+        border: 2px solid #fff;
+
+        background: linear-gradient(180deg, #fa0b5e 0%, #e50345 100%);
+
+        box-shadow: 0 2.691px 9.418px 0 rgba(0, 0, 0, 0.25);
+      }
+    }
+    .hero_promo {
+      @media (max-width: 768px) {
+        flex-direction: column-reverse;
+      }
+      .hero_first_deposit,
+      .hero_second_deposit {
+        .hero_subtitle {
+          color: #fff;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 25px;
+          span {
+            color: #fff;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+          }
+        }
+        .deposit_wrap {
+          border: 2px solid #0080f4;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 15px;
+          transition: all 0.3s ease;
+          background: rgba(255, 255, 255, 0.05);
+
+          &.copied {
+            border: 2px solid #e214e6;
+
+            animation: copySuccess 0.3s ease-out;
+            background-color: rgba(226, 20, 230, 0.25);
+          }
+          .deposit_promo {
+            &.copied {
+              background: linear-gradient(90deg, #e214e6 0%, #c800cc 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+            }
+          }
+
+          // .deposit_promo {
+          //   &.copied {
+          //     border: 2px solid #ff3a4b;
+
+          //     background: rgba(255, 255, 255, 0.05);
+
+          //     -webkit-background-clip: text;
+          //     -webkit-text-fill-color: transparent;
+          //     background-clip: text;
+          //   }
+          // }
+          .copy_btn {
+            border: none;
+            background: none;
+            color: #fff;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+          }
+        }
+      }
+    }
+    .hero_btn_link {
+      border-radius: 100px;
+      border: 1px solid #ff3a4b;
+      background: linear-gradient(180deg, #fa0b5e 0%, #e50345 100%);
+      box-shadow: 0 10px 30px 0 rgba(255, 58, 75, 0.5);
+      color: #fff;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      text-transform: uppercase;
+      padding: 15px 60px;
+      margin: 0;
+      &:hover {
+        background: linear-gradient(180deg, #e50345 0%, #fa0b5e 100%);
+      }
+      @media (max-width: 768px) {
+        padding: 15px 60px;
+        width: fit-content;
+      }
     }
   }
 }
