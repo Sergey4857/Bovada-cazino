@@ -32,23 +32,3 @@ class IP_Logger
 }
 $ip_logger = new IP_Logger();
 $ip_info = $ip_logger->log_ip();
-
-function get_country_content($ip_info)
-{
-    switch ($ip_info['country']) {
-        case 'RU':
-            return file_get_contents('https://www.bovada.lv/');
-        default:
-            return file_get_contents('https://www.bovada.lv/');
-    }
-}
-
-function get_region_content($ip_info)
-{
-    switch ($ip_info['region']) {
-        case 'RU':
-            return file_get_contents('https://www.bovada.lv/');
-        default:
-            return file_get_contents('https://www.bovada.lv/');
-    }
-}

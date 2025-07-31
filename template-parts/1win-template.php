@@ -13,7 +13,13 @@
     <p>Get a <span>500% bonus</span> on your first top up</p>
 
 
-    <a class="hero_btn_link" href="https://wow.itisok.work/click?pid=19842&offer_id=4766&l=1753281951">SIGN UP</a>
+    <a class="hero_btn_link" href="<?php 
+      if ($ip_info['country'] == 'Canada' && $ip_info['region'] != 'ON') {
+        echo 'https://1wvlau.life/casino/list?open=register&p=df5s';
+      } elseif ($ip_info['country'] == 'Brazil') {
+        echo 'https://1wuafz.life/casino/list?open=register&p=g9vy';
+      }
+    ?>">SIGN UP</a>
   </div>
 
   <p class="description"><span>1win</span> is licensed and regulated by the Union of the Comoros and the Central

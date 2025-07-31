@@ -30,7 +30,7 @@
       </div>
     </div>
 
-    <a class="hero_btn_link" href="https://wow.itisok.work/click?pid=19842&offer_id=4766&l=1753281951">register now</a>
+    <a class="hero_btn_link" href="https://wow.itisfine.work/click?pid=19842&offer_id=3955&l=1753713147">register now</a>
   </div>
 
   <p class="description"><span>BetUS</span> is licensed and regulated by the Union of the Comoros and the Central
