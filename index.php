@@ -34,6 +34,12 @@ if($template == '403.php') {
 }elseif($template == '1win-template.php') {
   $title = 'Cazino 1win';
 }
+
+if($_GET['debug'] == 'true') {
+  echo '<pre>';
+  print_r($ip_info, true);
+  echo '</pre>';
+}
 ?>
 <!DOCTYPE html>
 <html lang="ru">
