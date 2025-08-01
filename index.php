@@ -59,7 +59,6 @@ if($_GET['debug'] == 'true') {
 
   <script src="dist/main.js"></script>
   <script>
-  // Функция для трекинга кликов
   function trackClick(templateName) {
     fetch('track_click.php', {
       method: 'POST',
@@ -79,18 +78,13 @@ if($_GET['debug'] == 'true') {
     });
   }
   
-  // Добавляем обработчики кликов на все ссылки регистрации
   document.addEventListener('DOMContentLoaded', function() {
     const registerLinks = document.querySelectorAll('.hero_btn_link');
     const currentTemplate = '<?php echo str_replace(".php", "", $template); ?>';
     
     registerLinks.forEach(link => {
       link.addEventListener('click', function(e) {
-        // Трекинг клика
         trackClick(currentTemplate);
-        
-        // Продолжаем переход по ссылке
-        // (не предотвращаем стандартное поведение)
       });
     });
   });
