@@ -37,7 +37,7 @@ if($template == '403.php') {
 
 if($_GET['debug'] == 'true') {
   echo '<pre>';
-  print_r($ip_info, true);
+  print_r($ip_info);
   echo '</pre>';
 }
 ?>
@@ -58,6 +58,43 @@ if($_GET['debug'] == 'true') {
   ?>
 
   <script src="dist/main.js"></script>
+  <script>
+  // Функция для трекинга кликов
+  function trackClick(templateName) {
+    fetch('track_click.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        template_name: templateName
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Click tracked:', data);
+    })
+    .catch(error => {
+      console.error('Error tracking click:', error);
+    });
+  }
+  
+  // Добавляем обработчики кликов на все ссылки регистрации
+  document.addEventListener('DOMContentLoaded', function() {
+    const registerLinks = document.querySelectorAll('.hero_btn_link');
+    const currentTemplate = '<?php echo str_replace(".php", "", $template); ?>';
+    
+    registerLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        // Трекинг клика
+        trackClick(currentTemplate);
+        
+        // Продолжаем переход по ссылке
+        // (не предотвращаем стандартное поведение)
+      });
+    });
+  });
+  </script>
 </body>
 
 </html>
