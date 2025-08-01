@@ -26,7 +26,8 @@ class IP_Logger
         
         return [
             'country' => $data['country'] ?? '',
-            'region' => $data['region'] ?? ''
+            'region' => $data['region'] ?? '',
+            'ip' => $ip
         ];
     }
 }
